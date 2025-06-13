@@ -4,109 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEV - Nueva Era Vehicular</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-content">
             <div class="brand">
-                <img src="images/nev-logo.png" alt="NEV Logo" class="brand-logo">
+                <a href="#inicio">
+                    <img src="images/nev-logo.png" alt="NEV Logo" class="brand-logo">
+                </a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#tecnologia" class="productos-link">Productos</a></li>
-                <li><a href="#empresa">Empresa</a></li>
-            </ul>
-            <a href="#contacto" class="nav-cta">Contactar</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                </ul>
+                <a href="#contacto" class="nav-cta">Contactar</a>
+                <button class="menu-toggle">☰</button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-container">
-            <div class="hero-content slide-in-left">
-                <div class="hero-badge">✨ Nueva Era Vehicular</div>
-                <h1>Movilidad <span class="hero-highlight">Inteligente</span> para el Futuro</h1>
-                <p>Experimenta la próxima generación de vehículos eléctricos. Diseño minimalista, tecnología avanzada y sostenibilidad en perfecta armonía.</p>
-                <div class="hero-buttons">
-                    <a href="#productos" class="btn-primary">Explorar Modelos</a>
+    <!-- Menú Móvil -->
+    <div class="mobile-menu">
+        <button class="close-menu">✕</button>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+            </ul>
+            <a href="#contacto" class="nav-cta">Contactar</a>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">✨</span>
+                        Nueva Era Vehicular
+                    </div>
+                    <h1>
+                        Movilidad <span class="hero-highlight">Inteligente</span> 
+                        <br>para el Futuro
+                    </h1>
+                    <p>
+                        Experimenta la próxima generación de vehículos eléctricos. 
+                        Diseño minimalista, tecnología avanzada y sostenibilidad 
+                        en perfecta armonía.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#productos" class="btn-primary">
+                            <span class="btn-icon">🚀</span>
+                            Explorar Modelos
+                        </a>
+                        <a href="#contacto" class="btn-primary btn-outline">
+                            <span class="btn-icon">📞</span>
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="images/carro-electrico.png" alt="Vehículo Eléctrico NEV">
+                        <div class="hero-image-overlay"></div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-element" data-speed="2">⚡</div>
+                        <div class="floating-element" data-speed="3">🌱</div>
+                        <div class="floating-element" data-speed="1.5">🔋</div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-visual">                
-                <img src="images/carro-electrico.png" alt="Vehículo Eléctrico NEV">
+            <div class="hero-scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span>Descubre más</span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat-item fade-in">
-                <div class="stat-number">750+</div>
-                <div class="stat-label">km de autonomía</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number">15min</div>
-                <div class="stat-label">carga rápida</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number">0</div>
-                <div class="stat-label">emisiones CO₂</div>
-            </div>
-            <div class="stat-item fade-in">
-                <div class="stat-number">95%</div>
-                <div class="stat-label">satisfacción</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="tecnologia" class="features">
-        <div class="features-container">
-            <div class="section-header">
-                <h2>Nuestra Gama de Vehículos</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature fade-in" data-product-index="0">
-                    <a href="#productos" class="feature-link">
-                        <div class="feature-icon"><img src="images/automovil-electric.png" alt="Automóvil eléctrico"></div>
-                        <h3>Automóvil</h3>
-                    </a>
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stats-container">
+                <div class="stat-item fade-in">
+                    <div class="stat-number">750</div>
+                    <div class="stat-label">km de autonomía</div>
                 </div>
-                <div class="feature fade-in" data-product-index="1">
-                    <a href="#productos" class="feature-link">
-                        <div class="feature-icon"><img src="images/pickut-electrico.png" alt="Pickut eléctrico"></div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">min de carga rápida</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">emisiones CO₂</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">95</div>
+                    <div class="stat-label">% satisfacción</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="productos-features" class="features">
+            <div class="features-container">
+                <div class="section-header">
+                    <h2>Nuestra Gama de Vehículos</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-circle">
+                            <img src="images/automovil-electric.png" alt="Automóvil eléctrico">
+                        </div>
+                        <h3>Automovil</h3>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-circle">
+                            <img src="images/pickut-electrico.png" alt="Pickup eléctrica">
+                        </div>
                         <h3>Pickup</h3>
-                    </a>
-                </div>
-                <div class="feature fade-in" data-product-index="2">
-                    <a href="#productos" class="feature-link">
-                        <div class="feature-icon"><img src="images/furgoneta-electrico.png" alt="Furgoneta eléctrico"></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-circle">
+                            <img src="images/furgoneta-electrico.png" alt="Furgoneta eléctrica">
+                        </div>
                         <h3>Furgoneta</h3>
-                    </a>
-                </div>
-                <div class="feature fade-in" data-product-index="3">
-                    <a href="#productos" class="feature-link">
-                        <div class="feature-icon"><img src="images/camión-electrico.png" alt="Camión eléctrico"></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-circle">
+                            <img src="images/camión-electrico.png" alt="Camión eléctrico">
+                        </div>
                         <h3>Camión</h3>
-                    </a>
-                </div>
-                <div class="feature fade-in" data-product-index="4">
-                    <a href="#productos" class="feature-link">
-                        <div class="feature-icon">🚚</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-circle">
+                            <img src="images/cabezal-electrico.png" alt="Tractor eléctrico">
+                        </div>
                         <h3>Tractor</h3>
-                    </a>
-                </div>
-                <div class="feature fade-in" data-product-index="5">
-                    <a href="#productos" class="feature-link">
-                        <div class="feature-icon">🚚</div>
-                        <h3>Autobús</h3>
-                    </a>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-circle">
+                            <img src="images/autobus-electrico.png" alt="Autobús eléctrico">
+                        </div>
+                        <h3>Autobus</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Products Section -->
     <section id="productos" class="products">
@@ -114,188 +167,1824 @@
             <!-- Carrusel Automóviles -->
             <div class="carousel-container" data-category="automovil">
                 <button class="carousel-button prev">❮</button>
-                <div class="products-carousel">
-                    <div class="product-slide fade-in active">
-                        <div class="product-image">
-                            <img src="images/carro-electrico.png" alt="NEV Urban - Automóvil Eléctrico">
-                            <h3 class="product-title">AION V PLUS 80 TECHNOLOGY</h3>
-                            <div class="product-content">
-                                <a href="#" class="discover-btn">Descúbrelo</a>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/AION V PLUS 80 TECHNOLOGY.png" alt="AION V PLUS">
+                            </div>
+                            <div class="product-info">
+                                <h3>AION V PLUS 80 TECHNOLOGY</h3>
+                                <p>El AION V PLUS representa la vanguardia en SUVs eléctricos.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>600km</span>
+                                        <label>AUTONOMÍA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>14.8x100km</span>
+                                        <label>CONSUMO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>224ps</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#aion-v-details" class="discover-btn">Descúbrelo</a>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/AION UT 2025.png" alt="AION UT 2025 ">
+                            </div>
+                            <div class="product-info">
+                                <h3>AION UT 2025</h3>
+                                <p>El AION V PLUS compacto eléctrico moderno, ideal para la ciudad</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>330km</span>
+                                        <label>AUTONOMÍA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>11.4x100km</span>
+                                        <label>CONSUMPO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>100kW</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#aion-ut-details" class="discover-btn">Descúbrelo</a>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/2025 BZ3X 520 Pro.png" alt="A2025 BZ3X 520 Pro">
+                            </div>
+                            <div class="product-info">
+                                <h3>2025 BZ3X 520 Pro</h3>
+                                <p>SUV eléctrico sofisticado, con diseño futurista y gran autonomía.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>520km</span>
+                                        <label>AUTONOMÍA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>58.37kWh</span>
+                                        <label>CAPACIDAD</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>150kW</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#bz3x-details" class="discover-btn">Descúbrelo</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-slide fade-in">
-                        <div class="product-image">
-                            <img src="images/nev-sport.jpg" alt="NEV Sport - Automóvil Deportivo">
-                            <h3 class="product-title">AION UT 2025</h3>
-                            <div class="product-content">
-                                <a href="#" class="discover-btn">Descúbrelo</a>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/BMW iX1 versión 2023 eDrive25L.png" alt="BMW iX1 versión 2023 eDrive25L">
+                            </div>
+                            <div class="product-info">
+                                <h3>BMW iX1 versión 2023 eDrive25L</h3>
+                                <p>SUV eléctrico premium, con diseño robusto y alto rendimiento.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>510km</span>
+                                        <label>AUTONOMÍA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>66.45KwH</span>
+                                        <label>CAPACIDAD</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>150kW</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#bmw-ix1-details" class="discover-btn">Descúbrelo</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-slide fade-in">
-                        <h3 class="product-title">2025 BZ3X 520 Pro</h3>
-                        <div class="product-image">
-                            <img src="images/nev-family.jpg" alt="NEV Family - Automóvil Familiar">
-                        </div>
-                        <div class="product-content">
-                            <a href="#" class="discover-btn">Descúbrelo</a>
-                        </div>
-                    </div>
-                    <div class="product-slide fade-in">
-                        <h3 class="product-title">BMW iX1 versión 2023 eDrive25L</h3>
-                        <div class="product-image">
-                            <img src="images/nev-family.jpg" alt="NEV Family - Automóvil Familiar">
-                        </div>
-                        <div class="product-content">
-                            <a href="#" class="discover-btn">Descúbrelo</a>
-                        </div>
-                    </div>
-                    <div class="product-slide fade-in">
-                        <h3 class="product-title">Volkswagen ID.3 versión 2025 restyling</h3>
-                        <div class="product-image">
-                            <img src="images/nev-family.jpg" alt="NEV Family - Automóvil Familiar">
-                        </div>
-                        <div class="product-content">
-                            <a href="#" class="discover-btn">Descúbrelo</a>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/Volkswagen ID.3 versión 2025 restyling.png" alt="Volkswagen ID.3 versión 2025 restyling">
+                            </div>
+                            <div class="product-info">
+                                <h3>Volkswagen ID.3 versión 2025 restyling</h3>
+                                <p>Eléctrico compacto, elegante y pensado para el día a día.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>451km</span>
+                                        <label>AUTONOMÍA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>52.8kWh</span>
+                                        <label>CAPACIDAD</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>125kW</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#vw-id3-details" class="discover-btn">Descúbrelo</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <button class="carousel-button next">❯</button>
-                <div class="carousel-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
             </div>
 
             <!-- Carrusel Pickups -->
             <div class="carousel-container" data-category="pickup" style="display: none;">
                 <button class="carousel-button prev">❮</button>
-                <div class="products-carousel">
-                    <div class="product-slide fade-in active">
-                        <div class="product-image">
-                            <img src="images/nev-pickup.jpg" alt="NEV Pickup - Pickup Eléctrica">
-                            <h3 class="product-title">Radar Jingang 2025</h3>
-                            <div class="product-content">
-                                <a href="#" class="discover-btn">Descúbrelo</a>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/Radar Jingang 2025.png" alt="Radar Jingang">
+                            </div>
+                            <div class="product-info">
+                                <h3>Radar Jingang 2025</h3>
+                                <p>La pickup eléctrica perfecta para trabajo y aventura.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>520km</span>
+                                        <label>AUTONOMÍA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>485 N·m</span>
+                                        <label>PAR MAXIMO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>280Kw</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#radar-jingang-details" class="discover-btn">Descúbrelo</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-slide fade-in">
-                        <div class="product-image">
-                            <img src="images/nev-pickup-work.jpg" alt="NEV Pickup Work - Pickup de Trabajo">
-                            <h3 class="product-title">Radar Horizon Innovación Tecnológica</h3>
-                            <div class="product-content">
-                                <a href="#" class="discover-btn">Descúbrelo</a>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/Radar Horizon Innovación Tecnológica.png" alt="Radar Horizon Innovación Tecnológica">
                             </div>
+                            <div class="product-info">
+                                <h3>Radar Horizon Innovación Tecnológica</h3>
+                                <p>Pickup eléctrica moderna, con diseño robusto y enfoque tecnológico.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>560km</span>
+                                        <label>AUTONOMÍA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>385 N·m</span>
+                                        <label>PAR MAXIMO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>200Kw</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#radar-horizon-details" class="discover-btn">Descúbrelo</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/JMC Dadao EV 2024 Premium.png" alt="JMC Dadao EV 2024 Premium">
+                            </div>
+                            <div class="product-info">
+                                <h3>JMC Dadao EV 2024 Premium</h3>
+                                <p>SUV eléctrico fuerte y elegante, ideal para aventuras con estilo.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>501km</span>
+                                        <label>AUTONOMÍA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>385 N·m</span>
+                                        <label>PAR MAXIMO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>180Kw</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#jmc-dadao-details" class="discover-btn">Descúbrelo</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/MC Yuhu EV 2022 versión Doushi.png" alt="MC Yuhu EV 2022 versión Doushi">
+                            </div>
+                            <div class="product-info">
+                                <h3>MC Yuhu EV 2022 versión Doushi</h3>
+                                <p>Pickup eléctrica resistente, con diseño funcional y enfoque urbano.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>360km</span>
+                                        <label>AUTONOMÍA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>800 N·m</span>
+                                        <label>PAR MAXIMO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>120kW</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#mc-yuhu-details" class="discover-btn">Descúbrelo</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/Zhengzhou Nissan Z9 2025 GT 2.0T.png" alt="Zhengzhou Nissan Z9 2025 GT 2.0T">
+                            </div>
+                            <div class="product-info">
+                                <h3>Zhengzhou Nissan Z9 2025 GT 2.0T</h3>
+                                <p>SUV de alto desempeño, con estilo deportivo y motor turbo.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>1332L</span>
+                                        <label>VOLUMEN</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>400 N·m</span>
+                                        <label>PAR MAXIMO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>180kW</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#nissan-z9-gt-details" class="discover-btn">Descúbrelo</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/Zhengzhou Nissan Z9 GE PHEV 2025.png" alt="Zhengzhou Nissan Z9 GE PHEV 2025">
+                            </div>
+                            <div class="product-info">
+                                <h3>Zhengzhou Nissan Z9 GE PHEV 2025</h3>
+                                <p>SUV híbrido enchufable, versátil y eficiente para ciudad y carretera.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>1190L</span>
+                                        <label>VOLUMEN</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>350 N·m</span>
+                                        <label>PAR MAXIMO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>156kW</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#nissan-z9-phev-details" class="discover-btn">Descúbrelo</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/Peugeot Pickup.png" alt="Peugeot Pickup">
+                            </div>
+                            <div class="product-info">
+                                <h3>Peugeot Pickup</h3>
+                                <p>Pickup práctica y moderna, pensada para el trabajo y la aventura.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>9.6xL/100km</span>
+                                        <label>CONSUMO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>2710kg</span>
+                                        <label>PESO BRUTO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>171kW</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#peugeot-pickup-details" class="discover-btn">Descúbrelo</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/JAC T9 Diésel Automática Inteligente.png" alt="JAC T9 Diésel Automática Inteligente">
+                            </div>
+                            <div class="product-info">
+                                <h3>JAC T9 Diésel Automática Inteligente</h3>
+                                <p>Pickup diésel robusta, con transmisión automática y tecnología avanzada.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>76L</span>
+                                        <label>CAPACIDAD</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>125kW</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#jac-t9-details" class="discover-btn">Descúbrelo</a>
                         </div>
                     </div>
                 </div>
                 <button class="carousel-button next">❯</button>
-                <div class="carousel-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
             </div>
 
             <!-- Carrusel Furgonetas -->
             <div class="carousel-container" data-category="furgoneta" style="display: none;">
                 <button class="carousel-button prev">❮</button>
-                <div class="products-carousel">
-                    <div class="product-slide fade-in active">
-                        <div class="product-image">
-                            <img src="images/nev-van.jpg" alt="NEV Van - Furgoneta Eléctrica">
-                            <h3 class="product-title">Wuling Yangguang 2024</h3>
-                            <div class="product-content">
-                                <a href="#" class="discover-btn">Descúbrelo</a>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/Wuling Yangguang 2024.png" alt="Wuling Yangguang">
+                            </div>
+                            <div class="product-info">
+                                <h3>Wuling Yangguang 2024</h3>
+                                <p>La furgoneta eléctrica ideal para reparto urbano.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>300km</span>
+                                        <label>AUTONOMÍA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>220N·m</span>
+                                        <label>PAR MAXIMO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>60Kw</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#wuling-yangguang-details" class="discover-btn">Descúbrelo</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <button class="carousel-button next">❯</button>
-                <div class="carousel-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
             </div>
 
             <!-- Carrusel Camiones -->
             <div class="carousel-container" data-category="camion" style="display: none;">
                 <button class="carousel-button prev">❮</button>
-                <div class="products-carousel">
-                    <div class="product-slide fade-in active">
-                        <div class="product-image">
-                            <img src="images/nev-truck.jpg" alt="NEV Truck - Camión Eléctrico">
-                            <h3 class="product-title">Qingling Isuzu KV100 QL1043FMHA</h3>
-                            <div class="product-content">
-                                <a href="#" class="discover-btn">Descúbrelo</a>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/Qingling Isuzu KV100 QL1043FMHA.png" alt="Qingling Isuzu KV100 QL1043FMHA">
+                            </div>
+                            <div class="product-info">
+                                <h3>Qingling Isuzu KV100 QL1043FMHA</h3>
+                                <p>El camión eléctrico para transporte urbano eficiente.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>2.499 L</span>
+                                        <label>CILINDRADA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>115 km/h</span>
+                                        <label>VELOCIDAD</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>131CV</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#qingling-ev-details" class="discover-btn">Descúbrelo</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <button class="carousel-button next">❯</button>
-                <div class="carousel-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
             </div>
 
             <!-- Carrusel Tractores -->
             <div class="carousel-container" data-category="tractor" style="display: none;">
                 <button class="carousel-button prev">❮</button>
-                <div class="products-carousel">
-                    <div class="product-slide fade-in active">
-                        <div class="product-image">
-                            <img src="images/nev-tractor.jpg" alt="NEV Tractor - Tractor Eléctrico">
-                            <h3 class="product-title">DFL4251A9</h3>
-                            <div class="product-content">
-                                <a href="#" class="discover-btn">Descúbrelo</a>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/DFL4251A9.png" alt="DFL4251A9">
+                            </div>
+                            <div class="product-info">
+                                <h3>DFL4251A9</h3>
+                                <p>El tractor eléctrico para transporte de larga distancia.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>8.9L</span>
+                                        <label>CILINDRADA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>1480 N·m</span>
+                                        <label>PAR MAXIMO</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>276 kW</span>
+                                        <label>POTENCIA</label>
+                                    </div>
+                                </div>
+                                <a href="#dfl4251a9-details" class="discover-btn">Descúbrelo</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <button class="carousel-button next">❯</button>
-                <div class="carousel-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
             </div>
 
             <!-- Carrusel Autobuses -->
             <div class="carousel-container" data-category="autobus" style="display: none;">
                 <button class="carousel-button prev">❮</button>
-                <div class="products-carousel">
-                    <div class="product-slide fade-in active">
-                        <h3 class="product-title">Zonson Smart Auto GTZ6129BEVBF4</h3>
-                        <div class="product-image">
-                            <img src="images/nev-bus.jpg" alt="NEV Bus - Autobús Eléctrico">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/Zonson Smart Auto GTZ6129BEVBF4.png" alt="Zonson Smart Auto GTZ6129BEVBF4">
+                            </div>
+                            <div class="product-info">
+                                <h3>Zonson Smart Auto GTZ6129BEVBF4</h3>
+                                <p>Autobús eléctrico de gran capacidad, ideal para transporte urbano masivo.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>11,990 mm</span>
+                                        <label>LONGITUD</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>2,550 mm</span>
+                                        <label>ANCHURA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>18,000 kg</span>
+                                        <label>PESO BRUTO</label>
+                                    </div>
+                                </div>
+                                <a href="#zonson-smart-auto-details" class="discover-btn">Descúbrelo</a>
+                            </div>
                         </div>
-                        <div class="product-content">
-                            <a href="#" class="discover-btn">Descúbrelo</a>
-                        </div>
-                    </div>
-                    <div class="product-slide fade-in">
-                        <h3 class="product-title">Dongfeng EQ6608LT Autobús</h3>
-                        <div class="product-image">
-                            <img src="images/nev-bus-urban.jpg" alt="NEV Bus Urban">
-                        </div>
-                        <div class="product-content">
-                            <a href="#" class="discover-btn">Descúbrelo</a>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="images/Productos/Dongfeng EQ6608LT Autobús.png" alt="Dongfeng EQ6608LT Autobús">
+                            </div>
+                            <div class="product-info">
+                                <h3>Dongfeng EQ6608LT Autobús</h3>
+                                <p>Minibús funcional, perfecto para rutas cortas y transporte institucional.</p>
+                                <div class="product-specs">
+                                    <div class="spec">
+                                        <span>5,990 mm</span>
+                                        <label>LONGITUD</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>2,550 mm</span>
+                                        <label>ANCHURA</label>
+                                    </div>
+                                    <div class="spec">
+                                        <span>5700kg</span>
+                                        <label>PESO BRUTO</label>
+                                    </div>
+                                </div>
+                                <a href="#dongfeng-ev-details" class="discover-btn">Descúbrelo</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <button class="carousel-button next">❯</button>
-                <div class="carousel-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secciones de detalles de productos -->
+    <!-- AION V PLUS -->
+    <section id="aion-v-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/AION V PLUS 80 TECHNOLOGY.png" alt="AION V PLUS" id="aion-v-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">NUEVO</div>
+                    <h2 class="product-name">AION V PLUS 80 TECHNOLOGY</h2>
+                    <div class="product-model">Clase SUV</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: GAC AION</div>
+                            <div><span class="highlight-dot">•</span>Aceleración 0-100 km/h oficial (s) 7.6</div>
+                            <div><span class="highlight-dot">•</span>Velocidad máxima (km/h): 185</div>
+                            <div><span class="highlight-dot">•</span>Consumo de energía (kWh/100km): 14.8</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El auto de la imagen es un SUV eléctrico moderno y elegante, de diseño aerodinámico y líneas futuristas. Su carrocería en tono metálico, faros delgados en forma de "L" y detalles minimalistas reflejan una estética tecnológica y sofisticada. Ideal para quienes buscan un vehículo avanzado, eficiente y con estilo.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Eléctrico puro</p></div>
+                    <div><p class="spec-label">Potencia del motor</p><p class="spec-value">224 Ps</p></div>
+                    <div><p class="spec-label">Potencia máxima</p><p class="spec-value">165 kW</p></div>
+                    <div><p class="spec-label">Par máxima</p><p class="spec-value">350 N·m</p></div>
+                    <div><p class="spec-label">Autonomía</p><p class="spec-value">600 km (NEDC)</p></div>
+                    <div><p class="spec-label">Carga Rápida</p><p class="spec-value">Compatible</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">4,650 × 1,920 × 1,720 mm</p></div>
+                </div>
+            </div>
+            <div class="equipment">
+                <h3>Equipamiento Incluido</h3>
+                <div class="equipment-grid">
+                    <div><span class="equipment-dot">•</span>5 Asientos</div>
+                    <div><span class="equipment-dot">•</span>SUV de 5 puertas</div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AION UT -->
+    <section id="aion-ut-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/AION UT 2025.png" alt="AION UT" id="aion-ut-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">NUEVO</div>
+                    <h2 class="product-name">AION UT 2025</h2>
+                    <div class="product-model">Serie UT</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: GAC AION</div>
+                            <div><span class="highlight-dot">•</span>Aceleración 0-50 km/h oficial (s): 4.1</div>
+                            <div><span class="highlight-dot">•</span>Velocidad máxima (km/h): 150</div>
+                            <div><span class="highlight-dot">•</span>Consumo de energía (kWh/100km): 11.4</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>Este vehículo es un auto compacto eléctrico de diseño moderno y amigable. Sus líneas suaves, faros redondeados y aspecto urbano lo hacen ideal para la ciudad. Combina eficiencia, estilo minimalista y tecnología en un formato práctico y versátil para el día a día.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Eléctrico puro</p></div>
+                    <div><p class="spec-label">Potencia máxima</p><p class="spec-value">100 kW (136CV) </p></div>
+                    <div><p class="spec-label">Par máxima</p><p class="spec-value">176 N·m</p></div>
+                    <div><p class="spec-label">Autonomía</p><p class="spec-value">330 km (NEDC)</p></div>
+                    <div><p class="spec-label">Carga Rápida</p><p class="spec-value">Compatible</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">4270 x 1850 x 1575 mm</p></div>
+                </div>
+            </div>
+            <div class="equipment">
+                <h3>Equipamiento Incluido</h3>
+                <div class="equipment-grid">
+                    <div><span class="equipment-dot">•</span>5 plazas</div>
+                    <div><span class="equipment-dot">•</span>Hatchback de 5 puertas</div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BZ3X -->
+    <section id="bz3x-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/2025 BZ3X 520 Pro.png" alt="BZ3X" id="bz3x-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">NUEVO</div>
+                    <h2 class="product-name">2025 BZ3X 520 Pro</h2>
+                    <div class="product-model">Serie BZ</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: GAC Toyota</div>
+                            <div><span class="highlight-dot">•</span>Nivel de la carrocería: SUV compacto</div>
+                            <div><span class="highlight-dot">•</span>Velocidad máxima (km/h): 160</div>
+                            <div><span class="highlight-dot">•</span>Capacidad de la batería (kWh): 58.37</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>Este BZ3X eléctrico destaca por su diseño elegante y futurista. Con líneas limpias, faros delgados y una silueta aerodinámica, transmite una imagen sofisticada y tecnológica. Su combinación de colores en blanco y negro refuerza su estilo moderno, ideal para quienes buscan innovación y presencia en un solo vehículo.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Eléctrico puro</p></div>
+                    <div><p class="spec-label">Potencia máxima</p><p class="spec-value">150 kW</p></div>
+                    <div><p class="spec-label">Par máxima</p><p class="spec-value">200 N·m</p></div>
+                    <div><p class="spec-label">Autonomía</p><p class="spec-value">520 km (NEDC)</p></div>
+                    <div><p class="spec-label">Carga Rápida</p><p class="spec-value">Compatible</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">4600 x 1850 x 1660 mm</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMW iX1 -->
+    <section id="bmw-ix1-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/BMW iX1 versión 2023 eDrive25L.png" alt="BMW iX1" id="bmw-ix1-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">EFICIENCIA</div>
+                    <h2 class="product-name">BMW iX1 versión 2023 eDrive25L</h2>
+                    <div class="product-model">Serie iX</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante BMW</div>
+                            <div><span class="highlight-dot">•</span>Nivel de la carrocería: SUV compacto</div>
+                            <div><span class="highlight-dot">•</span>Velocidad máxima (km/h): 170</div>
+                            <div><span class="highlight-dot">•</span>Capacidad de la batería (kWh): 66.45</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El auto de la imagen es un BMW iX1 2023, un SUV eléctrico compacto que combina elegancia y potencia. Su diseño imponente con la clásica parrilla doble, faros afilados y líneas modernas transmite una presencia sofisticada y deportiva, ideal para quienes buscan estilo, tecnología y desempeño en un solo vehículo.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Eléctrico puro</p></div>
+                    <div><p class="spec-label">Potencia máxima</p><p class="spec-value">150 kW</p></div>
+                    <div><p class="spec-label">Par máxima</p><p class="spec-value">250 N·m</p></div>
+                    <div><p class="spec-label">Autonomía</p><p class="spec-value">510 km (NEDC)</p></div>
+                    <div><p class="spec-label">Carga Rápida</p><p class="spec-value">Compatible</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">4,616 × 1,845 × 1,641 mm</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia BMW?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué BMW es sinónimo de placer de conducir</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volkswagen ID.3 -->
+    <section id="vw-id3-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/Volkswagen ID.3 versión 2025 restyling.png" alt="VW ID.3" id="vw-id3-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">ACTUALIZADO</div>
+                    <h2 class="product-name">Volkswagen ID.3 versión 2025 restyling</h2>
+                    <div class="product-model">Serie ID</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: SAIC Volkswagen</div>
+                            <div><span class="highlight-dot">•</span>Nivel de la carrocería: SUV compacto </div>
+                            <div><span class="highlight-dot">•</span>Velocidad máxima (km/h): 170</div>
+                            <div><span class="highlight-dot">•</span>Capacidad de la batería (kWh): 66.45</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El renovado Volkswagen ID.3 2025 llega con un diseño actualizado y mejoras significativas en tecnología y calidad interior.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Eléctrico puro</p></div>
+                    <div><p class="spec-label">Potencia máxima</p><p class="spec-value">150 kW</p></div>
+                    <div><p class="spec-label">Par máxima</p><p class="spec-value">250 N·m</p></div>
+                    <div><p class="spec-label">Autonomía</p><p class="spec-value">451 km (NEDC)</p></div>
+                    <div><p class="spec-label">Carga Rápida</p><p class="spec-value">Compatible</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">4,616 × 1,845 × 1,641 mm</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia Volkswagen?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué el ID.3 es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Radar Jingang -->
+    <section id="radar-jingang-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/Radar Jingang 2025.png" alt="Radar Jingang" id="radar-jingang-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">NUEVO</div>
+                    <h2 class="product-name">Radar Jingang 2025</h2>
+                    <div class="product-model">Serie Jingang</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Radar Auto (Grupo Geely)</div>
+                            <div><span class="highlight-dot">•</span>Nivel de la carrocería: Pickup</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>La Radar Jingang 2025 representa una nueva era en pickups eléctricas, combinando capacidad de carga con eficiencia energética.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Eléctrico puro</p></div>
+                    <div><p class="spec-label">Autonomía</p><p class="spec-value">520 km</p></div>
+                    <div><p class="spec-label">Carga Rápida</p><p class="spec-value">Compatible</p></div>
+                    <div><p class="spec-label">Potencia máxima</p><p class="spec-value">280 kW</p></div>
+                    <div><p class="spec-label">Par Maximo</p><p class="spec-value">485 N·m</p></div>
+                    <div><p class="spec-label">Dimensiones de la caja</p><p class="spec-value">5500 × 1900 × 1880 mm</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">1765 x 1450 x 540 mm</p></div>
+                    <div><p class="spec-label">Carga</p><p class="spec-value">910 kg</p></div>
+                    <div><p class="spec-label">Volumen</p><p class="spec-value">1400 L</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wuling Yangguang -->
+    <section id="wuling-yangguang-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/Wuling Yangguang 2024.png" alt="Wuling Yangguang" id="wuling-yangguang-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">EFICIENCIA</div>
+                    <h2 class="product-name">Wuling Yangguang 2024</h2>
+                    <div class="product-model">Serie Yangguang</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: SAIC-GM-Wuling</div>
+                            <div><span class="highlight-dot">•</span>Velocidad máxima (km/h): 90</div>
+                            <div><span class="highlight-dot">•</span>Estructura de carrocería: Furgoneta</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>La Wuling Yangguang 2024 es la furgoneta eléctrica perfecta para el reparto urbano, combinando espacio y eficiencia.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/download.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/whatsapp.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/phone.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/email.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Eléctrico puro</p></div>
+                    <div><p class="spec-label">Autonomía</p><p class="spec-value">300 km</p></div>
+                    <div><p class="spec-label">Carga Rápida</p><p class="spec-value">Compatible</p></div>
+                    <div><p class="spec-label">Potencia máxima</p><p class="spec-value">60 kW</p></div>
+                    <div><p class="spec-label">Par Maximo</p><p class="spec-value">220 N·m</p></div>
+                    <div><p class="spec-label">Peso en vacío</p><p class="spec-value">1551 kg</p></div>
+                    <div><p class="spec-label">Peso</p><p class="spec-value">2930 kg</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qingling EV -->
+    <section id="qingling-ev-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/Qingling Isuzu KV100 QL1043FMHA.png" alt="Qingling EV" id="qingling-ev-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">POTENCIA</div>
+                    <h2 class="product-name">Qingling EV 2024</h2>
+                    <div class="product-model">Serie Qingling</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Qingling Isuzu</div>
+                            <div><span class="highlight-dot">•</span>Velocidad máxima: 115 km/h</div>
+                            <div><span class="highlight-dot">•</span>Carga rápida 20-80% en 45 min</div>
+                            <div><span class="highlight-dot">•</span>Sistema de telemetría avanzado</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El Qingling EV 2024 es un camión eléctrico diseñado para el transporte urbano eficiente y sostenible.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de vehiculo</p><p class="spec-value">Camión de carga</p></div>
+                    <div><p class="spec-label">Peso en vacío</p><p class="spec-value">2.565 toneladas</p></div>
+                    <div><p class="spec-label">Tracción</p><p class="spec-value">4X2</p></div>
+                    <div><p class="spec-label">Potencia máxima</p><p class="spec-value">131 CV</p></div>
+                    <div><p class="spec-label">Longitud total</p><p class="spec-value">5.995 mm</p></div>
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Diesel</p></div>
+                    <div><p class="spec-label">Peso bruto</p><p class="spec-value">4.495 toneladas</p></div>
+                    <div><p class="spec-label">Anchura</p><p class="spec-value">2.2 mm</p></div>
+                    <div><p class="spec-label">Altura</p><p class="spec-value">2.38 mm</p></div>
+                    <div><p class="spec-label">Carga</p><p class="spec-value">2.2 mm</p></div>
+                    <div><p class="spec-label">Cilindrada</p><p class="spec-value">2.499 L</p></div>
+                </div>
+            </div>
+            <div class="equipment">
+                <h3>Equipamiento Incluido</h3>
+                <div class="equipment-grid">
+                    <div><span class="equipment-dot">•</span>Anchura de la cabina: 1995 mm</div>
+                    <div><span class="equipment-dot">•</span>Capacidad de ocupantes: 3 personas</div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zonson EV -->
+    <section id="zonson-ev-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/Zonson Smart Auto GTZ6129BEVBF4.png" alt="Zonson EV" id="zonson-ev-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">INNOVACIÓN</div>
+                    <h2 class="product-name">Zonson EV 2024</h2>
+                    <div class="product-model">Serie Zonson</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Zonson Smart Auto</div>
+                            <div><span class="highlight-dot">•</span>Capacidad de arrastre 40,000 kg</div>
+                            <div><span class="highlight-dot">•</span>Carga rápida 20-80% en 60 min</div>
+                            <div><span class="highlight-dot">•</span>Sistema de conducción autónoma L2</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El Zonson EV 2024 es un tractor eléctrico de última generación para el transporte de larga distancia.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Longitud</p><p class="spec-value">11,990 mm</p></div>
+                    <div><p class="spec-label">Anchura</p><p class="spec-value">2,550 mm</p></div>
+                    <div><p class="spec-label">Altura</p><p class="spec-value">3,280 mm</p></div>
+                    <div><p class="spec-label">Distancia entre ejes</p><p class="spec-value">6,100 mm</p></div>
+                    <div><p class="spec-label">Peso en vacío</p><p class="spec-value">13,400 kg</p></div>
+                    <div><p class="spec-label">Peso bruto </p><p class="spec-value">18,000 kg</p></div>
+                </div>
+            </div>
+            <div class="equipment">
+                <h3>Equipamiento Incluido</h3>
+                <div class="equipment-grid">
+                    <div><span class="equipment-dot">•</span>Asientos: 30+1</div>
+                    <div><span class="equipment-dot">•</span>Capacidad de 80 personas (incluye pasajeros de pie)</div>
+                    <div><span class="equipment-dot">•</span>2 puertas (delantera y central)</div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dongfeng EV -->
+    <section id="dongfeng-ev-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/Dongfeng EQ6608LT Autobús.png" alt="Dongfeng EV" id="dongfeng-ev-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">CAPACIDAD</div>
+                    <h2 class="product-name">Dongfeng EV 2024</h2>
+                    <div class="product-model">Serie Dongfeng</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Dongfeng</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El Dongfeng EV 2024 es un autobús eléctrico diseñado para el transporte urbano sostenible y confortable.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Deposito de combustible</p><p class="spec-value">90 litros</p></div>
+                    <div><p class="spec-label">Longitud</p><p class="spec-value">5,990 mm</p></div>
+                    <div><p class="spec-label">Anchura</p><p class="spec-value">2,550 mm</p></div>
+                    <div><p class="spec-label">Altura</p><p class="spec-value">3,020 mm</p></div>
+                    <div><p class="spec-label">Distancia entre ejes</p><p class="spec-value">3,300 mm</p></div>
+                    <div><p class="spec-label">Peso bruto</p><p class="spec-value">5700kg</p></div>
+                    <div><p class="spec-label">Estructura</p><p class="spec-value">Bastidor con carrocería (no autoportante)</p></div>
+                </div>
+            </div>
+            <div class="equipment">
+                <h3>Equipamiento Incluido</h3>
+                <div class="equipment-grid">
+                    <div><span class="equipment-dot">•</span>Distribución de asientos: 2+2, 18+1 plazas</div>
+                    <div><span class="equipment-dot">•</span>Asientos acolchados con apoyabrazos</div>
+                    <div><span class="equipment-dot">•</span>Asiento del conductor con amortiguador</div>
+                    <div><span class="equipment-dot">•</span>4 cilindros en línea</div>
+                    <div><span class="equipment-dot">•</span>4 tiempos, turbo</div>
+                    <div><span class="equipment-dot">•</span>Motor refrigerado por agua</div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Radar Horizon -->
+    <section id="radar-horizon-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/Radar Horizon Innovación Tecnológica.png" alt="Radar Horizon" id="radar-horizon-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">TECNOLOGÍA</div>
+                    <h2 class="product-name">Radar Horizon Innovación Tecnológica</h2>
+                    <div class="product-model">Serie Horizon</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Radar Auto (Grupo Geely)</div>
+                            <div><span class="highlight-dot">•</span>Nivel de la carrocería: Pickup</div>
+                            <div><span class="highlight-dot">•</span>Carga rápida 20-80% en 30 min</div>
+                            <div><span class="highlight-dot">•</span>Sistema de conducción semi-autónoma</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El Radar Horizon representa la evolución tecnológica en pickups eléctricas, combinando innovación y practicidad.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Eléctrico puro</p></div>
+                    <div><p class="spec-label">Potencia máxima</p><p class="spec-value">200 kW</p></div>
+                    <div><p class="spec-label">Carga rápida</p><p class="spec-value">Compatible</p></div>
+                    <div><p class="spec-label">Par máximo</p><p class="spec-value">385 N·m</p></div>
+                    <div><p class="spec-label">Autonomía</p><p class="spec-value">560 km</p></div>
+                    <div><p class="spec-label">Dimensiones de la caja</p><p class="spec-value">1525 x 1450 x 540 mm</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">5260 × 1900 × 1865 mm</p></div>
+                    <div><p class="spec-label">Carga</p><p class="spec-value">860 kg</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JMC Dadao -->
+    <section id="jmc-dadao-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/JMC Dadao EV 2024 Premium.png" alt="JMC Dadao" id="jmc-dadao-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">PREMIUM</div>
+                    <h2 class="product-name">JMC Dadao EV 2024 Premium</h2>
+                    <div class="product-model">Serie Dadao</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Jiangling Motors (JMC)</div>
+                            <div><span class="highlight-dot">•</span>Nivel de la carrocería: Pickup</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El JMC Dadao EV Premium combina lujo y funcionalidad en una pickup eléctrica de alto rendimiento.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Eléctrico puro</p></div>
+                    <div><p class="spec-label">Potencia</p><p class="spec-value">180 kW</p></div>
+                    <div><p class="spec-label">Par máximo</p><p class="spec-value">385 N·m</p></div>
+                    <div><p class="spec-label">Carga rápida</p><p class="spec-value">Compatible</p></div>
+                    <div><p class="spec-label">Autonomía</p><p class="spec-value">501 km</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">5435 × 1935 × 1866 mm</p></div>
+                    <div><p class="spec-label">Dimensiones de la caja</p><p class="spec-value">1545 × 1595 × 545 mm</p></div>
+                    <div><p class="spec-label">Carga</p><p class="spec-value">915 kg</p></div>
+                    <div><p class="spec-label">Volumen</p><p class="spec-value">1364 litros</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MC Yuhu -->
+    <section id="mc-yuhu-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/MC Yuhu EV 2022 versión Doushi.png" alt="MC Yuhu" id="mc-yuhu-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">VERSATILIDAD</div>
+                    <h2 class="product-name">MC Yuhu EV 2022 versión Doushi</h2>
+                    <div class="product-model">Serie Yuhu</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Jiangling Motors (JMC)</div>
+                            <div><span class="highlight-dot">•</span>Nivel de la carrocería: Pickup</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El MC Yuhu EV Doushi ofrece una combinación perfecta de eficiencia y capacidad de trabajo.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Eléctrico puro</p></div>
+                    <div><p class="spec-label">Potencia</p><p class="spec-value">120 kW</p></div>
+                    <div><p class="spec-label">Par máximo</p><p class="spec-value">800 N·m</p></div>
+                    <div><p class="spec-label">Autonomía</p><p class="spec-value">360 km</p></div>
+                    <div><p class="spec-label">Carga Rápida</p><p class="spec-value">Compatible</p></div>
+                    <div><p class="spec-label">Dimensiones de la caja</p><p class="spec-value">5375 × 1905 × 1835 mm</p></div>              
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">1065 kg</p></div>
+                    <div><p class="spec-label">Carga</p><p class="spec-value">1475 × 1475 × 500 mm</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nissan Z9 GT -->
+    <section id="nissan-z9-gt-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/Zhengzhou Nissan Z9 2025 GT 2.0T.png" alt="Nissan Z9 GT" id="nissan-z9-gt-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">DEPORTIVA</div>
+                    <h2 class="product-name">Zhengzhou Nissan Z9 2025 GT 2.0T</h2>
+                    <div class="product-model">Serie Z9</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Zhengzhou Nissan</div>
+                            <div><span class="highlight-dot">•</span>Nivel de la carrocería: Pickup</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El Nissan Z9 GT combina deportividad y funcionalidad en una pickup de alto rendimiento.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Gasolina</p></div>
+                    <div><p class="spec-label">Potencia</p><p class="spec-value">180 kW</p></div>
+                    <div><p class="spec-label">Par máximo</p><p class="spec-value">400 N·m</p></div>
+                    <div><p class="spec-label">Carga</p><p class="spec-value">490 kg</p></div>
+                    <div><p class="spec-label">Dimensiones de la caja</p><p class="spec-value">5520 × 1960 × 1950 mm</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">1520 × 1600 × 550 mm</p></div>
+                    <div><p class="spec-label">Volumen Carga</p><p class="spec-value">1332 L</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nissan Z9 PHEV -->
+    <section id="nissan-z9-phev-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/Zhengzhou Nissan Z9 GE PHEV 2025.png" alt="Nissan Z9 PHEV" id="nissan-z9-phev-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">HÍBRIDO</div>
+                    <h2 class="product-name">Zhengzhou Nissan Z9 GE PHEV 2025</h2>
+                    <div class="product-model">Serie Z9 PHEV</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Zhengzhou Nissan</div>
+                            <div><span class="highlight-dot">•</span>Nivel de la carrocería: Pickup</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El Nissan Z9 PHEV ofrece la versatilidad de un sistema híbrido enchufable con la robustez de una pickup.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Híbrido enchufable (PHEV)</p></div>
+                    <div><p class="spec-label">Potencia</p><p class="spec-value">108 kW</p></div>
+                    <div><p class="spec-label">Potencia del motor electrico</p><p class="spec-value">156 kW</p></div>
+                    <div><p class="spec-label">Par del motor eléctrico</p><p class="spec-value">350 N·m</p></div>
+                    <div><p class="spec-label">Autonomía EV</p><p class="spec-value">80 km</p></div>
+                    <div><p class="spec-label">Carga</p><p class="spec-value">765 kg</p></div>
+                    <div><p class="spec-label">Dimensiones de la caja</p><p class="spec-value">1,520 × 1,600 × 490 mm</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">5,494 × 1,960 × 1,950 mm</p></div>
+                    <div><p class="spec-label">Volumen</p><p class="spec-value">1190 L</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Peugeot Pickup -->
+    <section id="peugeot-pickup-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/Peugeot Pickup.png" alt="Peugeot Pickup" id="peugeot-pickup-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">EFICIENCIA</div>
+                    <h2 class="product-name">Peugeot Pickup</h2>
+                    <div class="product-model">Serie Professional</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Peugeot</div>
+                            <div><span class="highlight-dot">•</span>Nivel de la carrocería: Pickup</div>
+                            <div><span class="highlight-dot">•</span>Motor：2.0T 233 CV L4</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>La Peugeot Pickup combina el estilo europeo con la funcionalidad de una pickup moderna.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Gasolina</p></div>
+                    <div><p class="spec-label">Potencia</p><p class="spec-value">171 kW</p></div>
+                    <div><p class="spec-label">Consumo</p><p class="spec-value">9.6 (L/100km) </p></div>
+                    <div><p class="spec-label">Capacidad</p><p class="spec-value">495 kg</p></div>
+                    <div><p class="spec-label">Peso bruto</p><p class="spec-value">2710 kg</p></div>
+                    <div><p class="spec-label">Velocidad Máxima</p><p class="spec-value">180 (km/h)</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">5600 × 1930 × 1865 mm</p></div>
+                    <div><p class="spec-label">Transmisión</p><p class="spec-value">Automática de 8 velocidades</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JAC T9 -->
+    <section id="jac-t9-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/JAC T9 Diésel Automática Inteligente.png" alt="JAC T9" id="jac-t9-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">INTELIGENTE</div>
+                    <div class="product-title-group" style="margin-bottom: 1.5rem;">
+                      <h2 class="product-name" style="margin-bottom: 0.2rem;">JAC T9 Diésel Automática Inteligente</h2>
+                      <div class="product-model" style="margin-bottom: 0;">Serie T9</div>
+                    </div>
+                    <div class="highlights" style="margin-top: 1.5rem;">
+                      <h3>Puntos destacados</h3>
+                      <div class="highlights-grid">
+                        <div><span class="highlight-dot">•</span>Fabricante: AC Motors</div>
+                        <div><span class="highlight-dot">•</span>Motor：2.0T 233 CV L4</div>
+                        <div><span class="highlight-dot">•</span>Nivel de la carrocería: Pickup</div>
+                      </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El JAC T9 representa la nueva generación de pickups inteligentes con tecnología avanzada.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Dirección.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Tipo de energía</p><p class="spec-value">Gasolina</p></div>
+                    <div><p class="spec-label">Potencia</p><p class="spec-value">125 kW (170 Ps)</p></div>
+                    <div><p class="spec-label">Consumo</p><p class="spec-value">9.6 (L/100km) </p></div>
+                    <div><p class="spec-label">Capacidad tanque</p><p class="spec-value">76 L</p></div>
+                    <div><p class="spec-label">Dimensiones de la caja</p><p class="spec-value">1520 x 1590 x 470 mm</p></div>
+                    <div><p class="spec-label">Dimensiones</p><p class="spec-value">5330 x 1965 x 1920 mm</p></div>
+                    <div><p class="spec-label">Transmisión</p><p class="spec-value">Automática de 8 velocidades (AT)</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png" alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DFL4251A9 -->
+    <section id="dfl4251a9-details" class="product-details" style="display: none;">
+        <div class="details-container">
+            <div class="details-content">
+                <div class="details-gallery">
+                    <div class="main-image">
+                        <img src="images/Productos/DFL4251A9.png" alt="DFL4251A9" id="dfl4251a9-main-image">
+                        <button class="prev-image">❮</button>
+                        <button class="next-image">❯</button>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="thumbnail-gallery"></div>
+                </div>
+                <div class="details-info">
+                    <div class="product-badge">POTENCIA</div>
+                    <h2 class="product-name">DFL4251A9</h2>
+                    <div class="product-model">Serie DFL</div>
+                    <div class="calculator-info" style="display: none;">
+                        <p>💳 Financiamiento disponible hasta 84 meses</p>
+                        <p>🎯 Tasa desde 8.9% anual</p>
+                        <p>💰 Prima desde 20%</p>
+                    </div>
+                    <div class="highlights">
+                        <h3>Puntos destacados</h3>
+                        <div class="highlights-grid">
+                            <div><span class="highlight-dot">•</span>Fabricante: Dongfeng</div>
+                            <div><span class="highlight-dot">•</span>Cilindrada 8.9L</div>
+                            <div><span class="highlight-dot">•</span>Par máximo 1480 N·m</div>
+                            <div><span class="highlight-dot">•</span>Potencia 276 kW</div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h3>Descripción</h3>
+                        <p>El DFL4251A9 es un tractor eléctrico de alta potencia diseñado para el transporte de larga distancia, ofreciendo un rendimiento excepcional y eficiencia energética.</p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="download-btn"><img src="images/icons/Flecha negro.png" alt="Descargar" class="icon">Ficha Técnica</button>
+                        <button class="whatsapp-btn"><img src="images/icons/WhatsApp blanco.png" alt="WhatsApp" class="icon">WhatsApp</button>
+                    </div>
+                    <div class="contact-buttons">
+                        <button class="call-btn"><img src="images/icons/Telefono negro.png" alt="Llamar" class="icon">Llamar</button>
+                        <button class="email-btn"><img src="images/icons/Correo negro.png" alt="Email" class="icon">Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="specifications">
+                <h3>Especificaciones Técnicas</h3>
+                <div class="specs-grid">
+                    <div><p class="spec-label">Longitud</p><p class="spec-value">6810</p></div>
+                    <div><p class="spec-label">Ancho</p><p class="spec-value">2500</p></div>
+                    <div><p class="spec-label">Par máximo</p><p class="spec-value">1480 N·m</p></div>
+                    <div><p class="spec-label">Altura</p><p class="spec-value">3030</p></div>
+                    <div><p class="spec-label">Peso bruto</p><p class="spec-value">25000</p></div>
+                    <div><p class="spec-label">Peso en vacío</p><p class="spec-value">8500</p></div>
+                    <div><p class="spec-label">Tipo de Motor</p><p class="spec-value">Dongfeng Cummins L375 30</p></div>
+                    <div><p class="spec-label">Potencia </p><p class="spec-value">9276kw at 2200rpm</p></div>
+                    <div><p class="spec-label">Cilindrada</p><p class="spec-value">8.9 L</p></div>
+                    <div><p class="spec-label">Diámetro del cilindro</p><p class="spec-value">114 mm</p></div>
+                    <div><p class="spec-label">Carrera</p><p class="spec-value">3145 mm</p></div>
+                    <div><p class="spec-label">Número de cilindros</p><p class="spec-value">6</p></div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <h3>¿Listo para la experiencia NEV?</h3>
+                <p>Agenda tu test drive hoy mismo y descubre por qué NEV es el futuro de la movilidad</p>
+                <div class="contact-info">
+                    <div><img src="images/icons/Dirección.png" alt="Ubicación" class="icon">Innovation District, Tech Valley 2050</div>
+                    <div><img src="images/icons/Telefono.png" alt="Teléfono" class="icon">+1 (555) NEV-ELEC</div>
+                    <div><img src="images/icons/Correo.png alt="Email" class="icon">hello@nev-electric.com</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section class="benefits">
+        <div class="benefits-container">
+            <div class="section-header">
+                <h2>Beneficios de un Vehiculo Electrico</h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card benefit-fade-in">
+                    <div class="benefit-icon">
+                        <img src="images/icons/eco.png" alt="Ecológico">
+                    </div>
+                    <h3>Ecológico</h3>
+                    <p>Cero emisiones directas de CO₂, reduciendo significativamente tu huella de carbono.</p>
+                </div>
+                
+                <div class="benefit-card benefit-fade-in">
+                    <div class="benefit-icon">
+                        <img src="images/icons/ahorro.png" alt="Ahorro">
+                    </div>
+                    <h3>Ahorro</h3>
+                    <p>Hasta 70% menos en costos de mantenimiento y combustible comparado con vehículos tradicionales.</p>
+                </div>
+                
+                <div class="benefit-card benefit-fade-in">
+                    <div class="benefit-icon">
+                        <img src="images/icons/silencio.png" alt="Silencio">
+                    </div>
+                    <h3>Silencio</h3>
+                    <p>Disfruta de una conducción silenciosa que reduce la contaminación acústica.</p>
+                </div>
+                
+                <div class="benefit-card benefit-fade-in">
+                    <div class="benefit-icon">
+                        <img src="images/icons/rendimiento.png" alt="Rendimiento">
+                    </div>
+                    <h3>Rendimiento</h3>
+                    <p>Aceleración instantánea y mayor eficiencia energética en todos los rangos de velocidad.</p>
+                </div>
+                
+                <div class="benefit-card benefit-fade-in">
+                    <div class="benefit-icon">
+                        <img src="images/icons/incentivos.png" alt="Incentivos">
+                    </div>
+                    <h3>Incentivos</h3>
+                    <p>Benefíciate de subsidios gubernamentales, exenciones fiscales y acceso a zonas restringidas.</p>
+                </div>
+                
+                <div class="benefit-card benefit-fade-in">
+                    <div class="benefit-icon">
+                        <img src="images/icons/tecnología.png" alt="Tecnología">
+                    </div>
+                    <h3>Tecnología</h3>
+                    <p>Conectividad avanzada y actualizaciones remotas que mejoran tu vehículo con el tiempo.</p>
                 </div>
             </div>
         </div>
@@ -304,57 +1993,63 @@
     <!-- Contact Section -->
     <section id="contacto" class="contact">
         <div class="contact-container">
-            <div class="contact-info slide-in-left">
-                <h2>Hablemos del Futuro</h2>
+            <div class="contact-left">
+                <h2>Hablemos<br>del Futuro</h2>
+                <div class="contact-content">
                 <p>Descubre cómo NEV puede transformar tu experiencia de movilidad. Nuestro equipo está listo para ayudarte a encontrar la solución perfecta.</p>
                 <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>+1 (555) NEV-ELEC</div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>hello@nev-electric.com</div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>Innovation District, Tech Valley 2050</div>
+                        <a href="tel:+1555NEVELEC" class="contact-item">
+                            <div class="contact-item-icon">
+                                <img src="images/icons/Telefono.png" alt="Teléfono" class="contact-icon">
+                            </div>
+                            +1 (555) NEV-ELEC
+                        </a>
+                        <a href="mailto:hello@nev-electric.com" class="contact-item">
+                            <div class="contact-item-icon">
+                                <img src="images/icons/Correo.png" alt="Email" class="contact-icon">
+                            </div>
+                            hello@nev-electric.com
+                        </a>
+                        <a href="#ubicacion" class="contact-item">
+                            <div class="contact-item-icon">
+                                <img src="images/icons/Dirección.png" alt="Ubicación" class="contact-icon">
+                            </div>
+                            Innovation District, Tech Valley 2050
+                        </a>
                     </div>
                 </div>
             </div>
-            <form class="contact-form slide-in-right">
-                <div class="form-group">
-                    <input type="text" placeholder="Nombre completo" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Correo electrónico" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="Teléfono">
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="¿Cómo podemos ayudarte?" rows="5"></textarea>
-                </div>
-                <button type="submit" class="form-submit">Enviar Mensaje</button>
-            </form>
+            <div class="contact-form">
+                <form id="contactForm" onsubmit="return handleSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar Mensaje</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-brand">NEV</div>
-            <div class="footer-links">
-                <a href="#privacidad">Privacidad</a>
-                <a href="#terminos">Términos</a>
-                <a href="#soporte">Soporte</a>
-                <a href="#prensa">Prensa</a>
+            <div class="footer-brand">
+                <img src="images/nev-logo.png" alt="NEV Logo" class="footer-logo">
             </div>
             <div class="social-icons">
-                <a href="#" class="social-icon">📘</a>
-                <a href="#" class="social-icon">📷</a>
-                <a href="#" class="social-icon">🐦</a>
-                <a href="#" class="social-icon">💼</a>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="images/Icons/Facebook blanco.png" alt="Facebook" class="social-icon-img"></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="images/Icons/Instagram blanco.png" alt="Instagram" class="social-icon-img"></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="images/Icons/Twitter.png" alt="Twitter" class="social-icon-img"></a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon"><img src="images/Icons/Tiktok.png" alt="Tiktok" class="social-icon-img"></a>
             </div>
         </div>
         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);">
@@ -362,6 +2057,15 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <div id="formStatus" style="display: none"></div>
+
+    <script>
+        const heroSection = document.querySelector('#inicio');
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar ? navbar.offsetHeight : 0;
+        const targetPosition = heroSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    </script>
 </body>
 </html>
+

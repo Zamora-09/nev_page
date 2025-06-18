@@ -1992,48 +1992,70 @@
 
     <!-- Contact Section -->
     <section id="contacto" class="contact">
+        <div class="contact-background">
+            <div class="contact-particles"></div>
+            <div class="contact-glow"></div>
+        </div>
         <div class="contact-container">
             <div class="contact-left">
-                <h2>Hablemos<br>del Futuro</h2>
-                <div class="contact-content">
-                <p>Descubre cómo NEV puede transformar tu experiencia de movilidad. Nuestro equipo está listo para ayudarte a encontrar la solución perfecta.</p>
+                <h2 class="contact-title">
+                    Hablemos del <span class="contact-highlight">Futuro</span>
+                </h2>
+                <p class="contact-subtitle">
+                    Descubre cómo NEV puede transformar tu experiencia de movilidad. 
+                    Nuestro equipo está listo para ayudarte a encontrar la solución perfecta.
+                </p>
                 <div class="contact-details">
-                        <a href="tel:+1555NEVELEC" class="contact-item">
-                            <div class="contact-item-icon">
-                                <img src="images/icons/Telefono.png" alt="Teléfono" class="contact-icon">
-                            </div>
-                            +1 (555) NEV-ELEC
-                        </a>
-                        <a href="mailto:hello@nev-electric.com" class="contact-item">
-                            <div class="contact-item-icon">
-                                <img src="images/icons/Correo.png" alt="Email" class="contact-icon">
-                            </div>
-                            hello@nev-electric.com
-                        </a>
-                        <a href="#ubicacion" class="contact-item">
-                            <div class="contact-item-icon">
-                                <img src="images/icons/Dirección.png" alt="Ubicación" class="contact-icon">
-                            </div>
-                            Innovation District, Tech Valley 2050
-                        </a>
-                    </div>
+                    <a href="tel:+1555NEVELEC" class="contact-item">
+                        <div class="contact-item-icon">
+                            <img src="images/Icons/Telefono.png" alt="Teléfono" class="contact-icon">
+                        </div>
+                        <div class="contact-item-content">
+                            <span class="contact-label">Teléfono</span>
+                            <span class="contact-value">+1 (555) NEV-ELEC</span>
+                        </div>
+                    </a>
+                    <a href="mailto:hello@nev-electric.com" class="contact-item">
+                        <div class="contact-item-icon">
+                            <img src="images/Icons/Correo.png" alt="Email" class="contact-icon">
+                        </div>
+                        <div class="contact-item-content">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">hello@nev-electric.com</span>
+                        </div>
+                    </a>
+                    <a href="#ubicacion" class="contact-item">
+                        <div class="contact-item-icon">
+                            <img src="images/Icons/Dirección.png" alt="Ubicación" class="contact-icon">
+                        </div>
+                        <div class="contact-item-content">
+                            <span class="contact-label">Ubicación</span>
+                            <span class="contact-value">Innovation District, Tech Valley 2050</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="contact-form">
-                <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <div class="contact-form-section">
+                <form id="contactForm" class="contact-form" onsubmit="return handleSubmit(event)">
                     <div class="form-group">
-                        <input type="text" name="nombre" placeholder="Nombre completo" required>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                        <div class="input-focus-border"></div>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                        <div class="input-focus-border"></div>
                     </div>
                     <div class="form-group">
-                        <input type="tel" name="telefono" placeholder="Teléfono" required>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+                        <div class="input-focus-border"></div>
                     </div>
                     <div class="form-group">
-                        <textarea name="mensaje" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+                        <textarea id="mensaje" name="mensaje" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+                        <div class="input-focus-border"></div>
                     </div>
-                    <button type="submit" class="submit-button">Enviar Mensaje</button>
+                    <button type="submit" class="submit-button">
+                        <span class="button-text">Enviar Mensaje</span>
+                    </button>
                 </form>
             </div>
         </div>

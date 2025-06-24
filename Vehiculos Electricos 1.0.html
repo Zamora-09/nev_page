@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEV - Nueva Era Vehicular</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,9 +27,28 @@
                 </ul>
                 <a href="#contacto" class="nav-cta">Contactar</a>
             </div>
+            <button class="mobile-menu-button" aria-label="Abrir menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Menú Móvil Desplegable -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <button class="close-menu-btn" aria-label="Cerrar menú">&times;</button>
+        </div>
+        <ul class="mobile-menu-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#contacto" class="mobile-menu-cta">Contactar</a></li>
+        </ul>
+    </div>
+    <div class="page-overlay"></div>
+    
     <main id="main-content">
         <!-- Hero Section -->
         <section id="inicio" class="hero">

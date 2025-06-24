@@ -740,6 +740,26 @@ img {
     z-index: 2;
 }
 
+@media (max-width: 600px) {
+    .stats-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Efecto de partículas flotantes para stats */
 .stats::after {
     content: '';
@@ -839,7 +859,7 @@ img {
 
 .stat-label {
     color: var(--text-color-light);
-    font-size: 1.1rem;
+    font-size: 0.82rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -3722,4 +3742,11 @@ img {
 .hero-buttons .btn-primary {
     color: #f2f2f2;
     text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 900px) {
+    .stats-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
 }

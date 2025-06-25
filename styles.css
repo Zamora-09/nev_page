@@ -3750,3 +3750,62 @@ img {
         gap: 1rem;
     }
 }
+
+@media (max-width: 768px) {
+  .benefits-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    width: 100%;
+  }
+  .benefit-icon {
+    display: none !important;
+  }
+  .benefit-card {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(30,64,175,0.07);
+    background: #fff;
+    padding: 0 !important;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+  }
+  .benefit-card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    transition: background 0.2s;
+    position: relative;
+  }
+  .benefit-card h3::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-left: 1rem;
+    transition: transform 0.2s;
+  }
+  .benefit-card.active h3::after {
+    content: '-';
+    transform: rotate(180deg);
+  }
+  .benefit-card p {
+    display: none;
+    padding: 0 0.5rem 1rem 0.5rem;
+    font-size: 0.97rem;
+    color: var(--text-color-light);
+    line-height: 1.5;
+  }
+  .benefit-card.active p {
+    display: block;
+  }
+}

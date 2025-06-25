@@ -2369,14 +2369,5 @@
     </footer>
 
     <div id="formStatus" style="display: none"></div>
-
-    <script>
-        const heroSection = document.querySelector('#inicio');
-        const navbar = document.querySelector('.navbar');
-        const navbarHeight = navbar ? navbar.offsetHeight : 0;
-        const targetPosition = heroSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-    </script>
 </body>
 </html>
-

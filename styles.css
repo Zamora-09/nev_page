@@ -1653,10 +1653,16 @@ img {
     transform: translate(-50%, -50%);
     z-index: 1;
     width: 90%;
+    align-items: center;
 }
 
 .contact-left {
-    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
 }
 
 .contact-title {
@@ -1664,6 +1670,7 @@ img {
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    color: rgba(255,255,255,0.7); /* Blanco no tan intenso */
 }
 
 .contact-highlight {
@@ -4098,8 +4105,12 @@ img {
 .form-group label {
     display: block;
     font-size: 0.98rem;
-    color: var(--text-color-light);
+    color: rgba(255,255,255,0.7); /* Blanco no tan intenso */
     margin-bottom: 0.4rem;
     font-weight: 500;
     letter-spacing: 0.5px;
+}
+
+.submit-button .button-text {
+    color: #222831 !important; /* Gris oscuro */
 }

@@ -4114,3 +4114,74 @@ img {
 .submit-button .button-text {
     color: #222831 !important; /* Gris oscuro */
 }
+
+@media (max-width: 600px) {
+  .contact-form-section {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+  }
+  .contact-background {
+    background: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-group {
+    margin: 0.15rem 0 !important;
+    width: 99%;
+  }
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem !important;
+    font-size: 0.93rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    min-height: 150vh !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-subtitle {
+    font-size: 0.93rem !important;
+  }
+  .form-group label,
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.93rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-item-content {
+    font-size: 0.93rem !important;
+    font-weight: 400 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-item-content,
+  .contact-value {
+    font-size: 0.93rem !important;
+    font-weight: 400 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-group label,
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.85rem !important;
+  }
+  .form-group input,
+  .form-group textarea {
+    padding: 0.5rem !important;
+  }
+}

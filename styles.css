@@ -4308,3 +4308,101 @@ img {
     border-radius: 16px !important;
   }
 }
+
+/* =================================
+   ESTILOS ESPECÍFICOS PARA MÓVIL - FEATURES
+   ================================= */
+
+/* Estilos para móviles que ocultan círculos e imágenes de categorías */
+@media (max-width: 768px) {
+    .features-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.1rem !important;
+        padding: 1.2rem 0 !important;
+        justify-items: center !important;
+        align-items: center !important;
+        background: none !important;
+        box-shadow: none !important;
+    }
+    .feature-item {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 999px !important;
+        padding: 0.5rem 0.2rem !important;
+        min-width: unset !important;
+        text-align: center !important;
+        transition: color 0.2s, background 0.2s;
+        color: var(--primary-color) !important;
+        font-weight: 600 !important;
+        font-size: 1.05rem !important;
+        cursor: pointer !important;
+        margin: 0 !important;
+        outline: none !important;
+        position: relative !important;
+        z-index: 1;
+    }
+    .feature-item.active {
+        background: rgba(52, 152, 219, 0.13) !important; /* celeste transparente */
+        color: var(--primary-color) !important;
+        border-radius: 999px !important;
+        font-weight: 700 !important;
+        box-shadow: none !important;
+        padding: 0.5rem 0.2rem !important;
+    }
+    .feature-item h3 {
+        background: none !important;
+        color: inherit !important;
+        font-weight: inherit !important;
+        font-size: inherit !important;
+        margin: 0 !important;
+        padding: 0.2rem 0.7rem !important;
+        border-radius: 999px !important;
+        transition: color 0.2s, background 0.2s;
+    }
+    .feature-item.active h3 {
+        color: var(--primary-color) !important;
+        background: none !important;
+        font-weight: 700 !important;
+    }
+    .feature-circle, .feature-circle img {
+        display: none !important;
+    }
+    .feature-item::before,
+    .feature-item::after,
+    .feature-item.active h3::after {
+        display: none !important;
+        content: none !important;
+    }
+}
+
+/* Animación para dibujar la línea */
+@keyframes drawLineEnhanced {
+    from { width: 0; }
+    to { width: 70%; }
+}
+
+/* Animación de pulso para botones activos */
+@keyframes activePulse {
+    0%, 100% { 
+        box-shadow: 0 15px 35px rgba(52, 152, 219, 0.3);
+        transform: scale(1.1) rotate(5deg);
+    }
+    50% { 
+        box-shadow: 0 20px 45px rgba(52, 152, 219, 0.4);
+        transform: scale(1.15) rotate(5deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        padding: 0.7rem 0 0.7rem 0 !important;
+        background: transparent !important;
+        min-height: unset !important;
+        box-shadow: none !important;
+    }
+    .features-grid {
+        padding: 0.2rem 0 !important;
+    }
+}

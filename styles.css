@@ -4295,3 +4295,16 @@ img {
     align-self: stretch !important;
   }
 }
+
+@media (max-width: 600px) {
+  .discover-btn {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    width: 90% !important;
+    max-width: 260px !important;
+    min-width: 140px !important;
+    border-radius: 16px !important;
+  }
+}

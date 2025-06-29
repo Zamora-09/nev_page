@@ -304,12 +304,10 @@ img {
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease;
-    gap: 1.5rem;
-    padding: 0 1rem;
     gap: 30px;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: visible;
+    width: auto;
+    justify-content: flex-start;
+    padding: 0;
 }
 
 .carousel-button {
@@ -2995,9 +2993,13 @@ img {
 
     /* --- PRODUCTS --- */
     .carousel-wrapper {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
+        display: flex;
+        justify-content: flex-start;
+        width: 100vw;
+        overflow: hidden;
+        scroll-snap-type: none;
+        -webkit-overflow-scrolling: auto;
+        padding: 0;
     }
     .carousel-wrapper::-webkit-scrollbar {
         display: none;
@@ -3815,11 +3817,11 @@ img {
 @media (max-width: 600px) {
   .carousel-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100vw;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    scroll-snap-type: none;
+    -webkit-overflow-scrolling: auto;
     padding: 0;
   }
   .carousel-track {
@@ -4183,5 +4185,113 @@ img {
   .form-group input,
   .form-group textarea {
     padding: 0.5rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-button {
+    display: flex;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    font-size: 1.5rem !important;
+    z-index: 100 !important;
+    background: #fff !important;
+    border: 2px solid var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    opacity: 1 !important;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+  }
+  .carousel-button.prev { left: 0.5rem !important; right: auto !important; }
+  .carousel-button.next { right: 0.5rem !important; left: auto !important; }
+}
+
+.carousel-button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  background: #f5f5f5 !important;
+  border-color: #ddd !important;
+  color: #999 !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 600px) {
+  .products-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .carousel-wrapper {
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  .carousel-track {
+    width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    gap: 30px !important;
+  }
+  .product-card {
+    min-width: 80vw !important;
+    max-width: 80vw !important;
+    width: 80vw !important;
+    margin: 0 !important;
+    scroll-snap-align: center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    padding-bottom: 0.5rem !important;
+    min-height: unset !important;
+    background: transparent !important;
+  }
+  .products-container {
+    padding-bottom: 0 !important;
+  }
+  .carousel-container {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    min-height: unset !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+  }
+  .product-info {
+    padding: 1rem 1rem 0.5rem 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+  .product-specs {
+    width: 100% !important;
+    margin: 0.5rem 0 0.5rem 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    gap: 0.1rem !important;
+  }
+  .discover-btn {
+    width: 100% !important;
+    margin: 1rem 0 0.5rem 0 !important;
+    align-self: stretch !important;
   }
 }

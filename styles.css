@@ -3835,17 +3835,18 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--primary-color);
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #1a90ff;
     margin: 0;
-    padding: 1rem 0.5rem;
-    cursor: pointer;
+    padding: 18px 28px 10px 18px;
+    background: transparent;
     border: none;
-    background: none;
-    width: 100%;
-    transition: background 0.2s;
+    outline: none;
+    cursor: pointer;
     position: relative;
+    user-select: none;
+    min-height: 32px;
   }
   .benefit-card h3::after {
     content: '+';
@@ -5120,4 +5121,190 @@ img {
         transform: none;
         width: 100%;
     }
+}
+
+/* Acordeón de beneficios solo en móviles */
+@media (max-width: 768px) {
+  .benefit-content {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), padding 0.35s, opacity 0.35s;
+    padding: 0 0;
+    opacity: 0;
+  }
+  .benefit-card.active .benefit-content {
+    max-height: 200px; /* Ajusta según el contenido */
+    padding: 12px 0 8px 0;
+    opacity: 1;
+  }
+  .benefit-card h3 {
+    cursor: pointer;
+    position: relative;
+    padding-right: 32px;
+    user-select: none;
+  }
+  .benefit-card h3::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5em;
+    color: #1a90ff;
+    transition: transform 0.3s, content 0.3s;
+  }
+  .benefit-card.active h3::after {
+    content: '-';
+    transform: rotate(180deg);
+  }
+}
+
+/* Escritorio: el contenido siempre visible */
+@media (min-width: 769px) {
+  .benefit-content {
+    display: block !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    padding: 0 !important;
+  }
+  .benefit-card h3::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-container {
+    padding: 0 8px;
+  }
+  .benefit-card {
+    margin-bottom: 16px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+    background: #fff;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+    border: 1.5px solid #e0e7ef;
+  }
+  .benefit-card.active {
+    box-shadow: 0 4px 24px 0 rgba(26,144,255,0.10);
+    border-color: #1a90ff;
+  }
+  .benefit-card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #1a90ff;
+    margin: 0;
+    padding: 18px 18px 10px 18px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+  }
+  .benefit-card h3::after {
+    content: '+';
+    font-size: 1.5em;
+    color: #1a90ff;
+    margin-left: 8px;
+    transition: transform 0.3s, content 0.3s;
+    line-height: 1;
+  }
+  .benefit-card.active h3::after {
+    content: '-';
+    transform: rotate(180deg);
+  }
+  .benefit-content {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), padding 0.35s, opacity 0.35s;
+    padding: 0 18px;
+    opacity: 0;
+    font-size: 1em;
+    color: #222;
+  }
+  .benefit-card.active .benefit-content {
+    max-height: 200px; /* Ajusta según el contenido */
+    padding: 0 18px 16px 18px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefit-card h3 {
+    position: relative;
+    padding: 18px 18px 10px 18px;
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #1a90ff;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    min-height: 32px;
+    display: block;
+  }
+  .icon-toggle {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 1.5em;
+    color: #1a90ff;
+    background: transparent;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefit-card h3::after,
+  .benefit-card.active h3::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    border: none !important;
+    height: 0 !important;
+  }
+  /* Si hay alguna regla para .benefit-card.active::before que muestre una línea, desactívala también */
+  .benefit-card.active::before {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    height: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefit-content {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 18px;
+    transition:
+      max-height 0.4s cubic-bezier(0.4,0,0.2,1),
+      opacity 0.3s,
+      padding 0.3s;
+  }
+  .benefit-card.active .benefit-content {
+    max-height: 500px; /* Ajusta según el contenido máximo esperado */
+    opacity: 1;
+    padding: 0 18px 16px 18px;
+    transition:
+      max-height 0.5s cubic-bezier(0.4,0,0.2,1),
+      opacity 0.3s,
+      padding 0.3s;
+  }
 }

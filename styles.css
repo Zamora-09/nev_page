@@ -1593,17 +1593,26 @@ img {
    CONTACT SECTION
    ===================== */
 .contact {
-    padding: 0;
-    background: linear-gradient(135deg, #001233 0%, #023e8a 100%);
-    position: relative;
-    overflow: hidden;
-    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh !important;
+    height: auto !important;
+    background: linear-gradient(135deg, #001233 0%, #023e8a 100%) !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
 }
 
 .contact-background {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    z-index: 0 !important;
+    pointer-events: none;
 }
 
 .contact-particles {
@@ -1640,27 +1649,22 @@ img {
 }
 
 .contact-container {
+    width: 100%;
     max-width: 1200px;
-    padding: 4rem 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
     align-items: center;
+    height: 100%;
 }
 
-.contact-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
+.contact-left,
+.contact-form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .contact-title {
@@ -1750,12 +1754,16 @@ img {
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
+    min-width: 0;
+    width: 100%;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    min-width: 0;
+    width: 100%;
 }
 
 .form-group {
@@ -1773,6 +1781,8 @@ img {
     font-size: 1rem;
     transition: all var(--transition-fast);
     backdrop-filter: blur(10px);
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .form-group input::placeholder,
@@ -5308,3 +5318,247 @@ img {
       padding 0.3s;
   }
 }
+
+@media (max-width: 480px) {
+  .whatsapp-modal-header h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    padding: 0 8px;
+    margin: 0;
+    text-align: center;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-modal-header h3 {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    min-height: unset !important;
+    height: auto !important;
+    padding-bottom: 2rem !important;
+  }
+  .contact-container {
+    position: static !important;
+    transform: none !important;
+    top: unset !important;
+    left: unset !important;
+    width: 100% !important;
+    padding-bottom: 2rem !important;
+    min-height: unset !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+  }
+  #formStatus {
+    transition: min-height 0.3s, padding 0.3s;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    background: linear-gradient(135deg, #001233 0%, #023e8a 100%);
+    padding-bottom: 0 !important;
+    min-height: unset !important;
+    height: auto !important;
+  }
+  .contact-container {
+    background: none !important;
+    border-radius: 18px 18px 0 0;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 2rem 1rem 1rem 1rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .contact-container {
+    grid-template-columns: 0.9fr minmax(320px, 1.3fr);
+    max-width: 98vw;
+    padding: 2rem 2vw;
+    gap: 2rem;
+  }
+}
+
+.contact-form-section,
+.contact-form {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* Ajuste solo para la sección de contacto en escritorios medianos/pequeños */
+@media (max-width: 1300px) {
+  .contact-container {
+    grid-template-columns: minmax(220px, 1fr) minmax(180px, 0.7fr);
+    max-width: 99vw;
+    padding: 1.5rem 1vw;
+    gap: 1.2rem;
+  }
+  .contact-form-section,
+  .contact-form {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 260px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 1300px) {
+  .contact {
+    min-height: unset !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .contact-container {
+    min-height: unset !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .contact-form-section {
+    min-height: unset !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* SOLO estilos compactos aquí */
+  .contact-form-section .form-group input,
+  .contact-form-section .form-group textarea {
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.95rem !important;
+    min-height: 36px !important;
+  }
+  .contact-form-section .form-group textarea {
+    min-height: 70px !important;
+    font-size: 0.95rem !important;
+  }
+  .contact-form-section .form-group label {
+    font-size: 0.92rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+  .contact-form-section .submit-button {
+    padding: 0.7rem 1.2rem !important;
+    font-size: 1rem !important;
+    border-radius: 8px !important;
+    min-height: 36px !important;
+  }
+  .contact-form-section .button-text {
+    font-size: 1rem !important;
+  }
+  .contact-form-section .form-group {
+    margin-bottom: 0.7rem !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* SOLO estilos grandes aquí */
+  .contact-form-section .form-group input,
+  .contact-form-section .form-group textarea {
+    padding: 1rem 1.5rem !important;
+    font-size: 1.15rem !important;
+    min-height: 48px !important;
+  }
+  .contact-form-section .form-group textarea {
+    min-height: 120px !important;
+    font-size: 1.15rem !important;
+  }
+  .contact-form-section .form-group label {
+    font-size: 1.08rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+  .contact-form-section .submit-button {
+    padding: 1rem 2rem !important;
+    font-size: 1.15rem !important;
+    border-radius: 10px !important;
+    min-height: 48px !important;
+  }
+  .contact-form-section .button-text {
+    font-size: 1.15rem !important;
+  }
+  .contact-form-section .form-group {
+    margin-bottom: 1.2rem !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  .contact-form-section .form-group input,
+  .contact-form-section .form-group textarea {
+    padding: 1rem 1.5rem !important;
+    font-size: 1.15rem !important;
+    min-height: 48px !important;
+  }
+  .contact-form-section .form-group textarea {
+    min-height: 120px !important;
+    font-size: 1.15rem !important;
+  }
+  .contact-form-section .form-group label {
+    font-size: 1.08rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+  .contact-form-section .submit-button {
+    padding: 1rem 2rem !important;
+    font-size: 1.15rem !important;
+    border-radius: 10px !important;
+    min-height: 48px !important;
+  }
+  .contact-form-section .button-text {
+    font-size: 1.15rem !important;
+  }
+  .contact-form-section .form-group {
+    margin-bottom: 1.2rem !important;
+  }
+  .contact-form-section {
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.2rem !important;
+  }
+  .hero-content {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    max-width: 520px !important;
+  }
+  .hero-content h1 {
+    font-size: 3.2rem !important;
+    margin-bottom: 1.1rem !important;
+  }
+  .hero-content p {
+    font-size: 1.05rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .hero-badge {
+    margin-bottom: 0.7rem !important;
+    font-size: 1.05rem !important;
+    padding: 0.5rem 1.1rem !important;
+  }
+  .hero-buttons {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    gap: 0.7rem !important;
+  }
+}
+
